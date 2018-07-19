@@ -16,7 +16,7 @@ public class EmailApp {
 		com.email.service.EmailService emailService = new EmailServiceImpl();
 		logger.logp(Level.INFO, CLASS_NAME, "main", "Email sending starts");
 		
-		boolean status = emailService.send("smtp.bcbsma.com", "EDI5010@BCBSMA.com", Arrays.asList("mohammed.abdulhakeem@bcbsma.com"), null, "Test mail", "This is a test mail. Please ignore");
+		boolean status = emailService.send("host", "senderemail@email.com", Arrays.asList("toemail@email.com"), null, "Test mail", "This is a test mail. Please ignore");
 
 		if(!status){
 			logger.logp(Level.INFO, CLASS_NAME, "main", "Email sending failed");
